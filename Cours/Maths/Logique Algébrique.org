@@ -154,7 +154,7 @@ Comme son nom l'indique, cela correspond à vérifier si les deux sous-propositi
 
 *** Exemples
 
-- ((3 < 5) \land (9 > 5)) \Leftrightarrow ((4 = 8/2) \Rightarrow (3 > 4))
+- ((3 < 5) \land (9 < 5)) \Leftrightarrow ((4 = 8/2) \Rightarrow (3 > 4))
 
 Les *deux sous-propositions étant fausses*, la proposition est donc vraie (si vous avez un doute sur pourquoi ces sous-propositions sont fausses, relisez les paragraphes qui leurs sont dédiés)
 
