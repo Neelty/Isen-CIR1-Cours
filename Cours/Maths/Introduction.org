@@ -1,0 +1,103 @@
+#+TITLE:Introduction
+#+AUTHOR: Pim
+
+
+* Table Of Contents :toc:
+- [[#disclaimer][Disclaimer]]
+- [[#propositions][Propositions]]
+  - [[#quest-quune-proposition-][Qu'est qu'une proposition ?]]
+  - [[#exemples][Exemples]]
+  - [[#subtilité][Subtilité]]
+  - [[#les-propositions-composées][Les propositions composées]]
+- [[#propositions-avec-symboles][Propositions avec symboles]]
+  - [[#conjonction][Conjonction]]
+  - [[#disjonction][Disjonction]]
+
+* Disclaimer
+*Attention, cela n'a pas pour but de remplacer le cours ! Il est juste présent pour vous aider à le comprendre. Il ne faut surtout pas vous appuyer totalement dessus. Certains points seront passés (car j'ai la flemme).*
+
+* Propositions
+** Qu'est qu'une proposition ?
+
+Une proposition est *un objet théorique*, ayant la particularité suivante : *il est soit Vrai, soit Faux*.
+
+** Exemples
+
+- John a 27 ans.
+
+Correcte et simple
+
+- Il fait beau aujourd'hui.
+
+Correcte et facilement vérifiable
+
+- 4 > 9
+
+Malgrès une absurdité, cela n'en reste pas moins qu'une proposition. (mais ca pique les yeux quand même)
+
+** Subtilité
+
+- Une proposition qui ne décrit qu'une seule idée (1 = 2 - 1) est dit *atomique*
+
+- Les prochaines phrases, informations *ne sont pas des propositions*:
+
+  + Va t'en.
+
+    N'a pas de sens. Ne donne pas d'idée, c'est juste un ordre. (mais reste quand même hein)
+
+  + x - 3 = 5
+
+    Pas correct, car nous n'avons *pas d'informations sur x*. Il faut lui attribuer une valeur pour que cela soit une proposition
+
+  + Cette proposition est fausse.
+
+    Une proposition ne peut pas se *réferrer à elle-même*.
+
+** Les propositions composées
+
+A l'instar des propositions atomiques (une seule idée), les *compositions composées* sont composées de plusieurs sous propositions. Nous avons donc avoir besoin *d'objet nous permettant de lier les propositions entre-elles*. (je les decrirai dans le prochain sujet)
+
+- Exemple:
+
+  *John a 27 ans et il aime la bières*
+
+  Ici 2 idées mise en évidence, et misent en relation avec *et*
+
+* Propositions avec symboles
+
+** Conjonction
+
+Une proposition composée avec une conjonction nécessite que les *2 sous propositions soit vraies*.
+On le note \land
+
+Exemples:
+
+  - 5 > 3 \land 9 < 10
+
+    Vrai, *car les deux sous-propositions sont vraies*
+
+  - 5 < 3 \land 9 < 10
+
+    Faux, car 5 < 3 est faux
+
+  - (5 > 3 \land 9 < 10) \land John est heureux
+
+    John étant quelqu'un d'heureux, cette proposition est vraie.
+
+** Disjonction
+
+Cette fois-ci, il faut que *au moins une des deux sous-proposition soit vraie*.
+
+Exemples:
+
+  - 5 > 3 \lor 5 < 3
+
+    Vrai (vous avez compris le principe maintenant)
+
+  - 10 > 15 \lor 8 < 5
+
+    Faux
+
+  - (John est heureux \lor John est malheureux) \lor 2/3 \in N
+
+    Vraie, la puissance de la gaieté de John est absolue !
