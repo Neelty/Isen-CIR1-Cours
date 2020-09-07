@@ -61,7 +61,7 @@ A l'instar des propositions atomiques (une seule idée), les *compositions compo
 
 - Exemple:
 
-  *John a 27 ans et il aime la bières*
+  *John a 27 ans et il aime les bières*
 
   Ici 2 idées misent en évidence, et misent en relation avec *et*
 
@@ -74,15 +74,15 @@ On le note \land .
 
 *** Exemples:
 
-  - 5 > 3 \land 9 < 10
+  - (5 > 3) \land (9 < 10)
 
     Vrai, *car les deux sous-propositions sont vraies*
 
-  - 5 < 3 \land 9 < 10
+  - (5 < 3) \land (9 < 10)
 
     Faux, car 5 < 3 est faux
 
-  - (5 > 3 \land 9 < 10) \land John est heureux
+  - ((5 > 3) \land (9 < 10)) \land John est heureux
 
     John étant quelqu'un d'heureux, cette proposition est vraie.
 
@@ -104,15 +104,15 @@ Cette fois-ci, il faut que *au moins une des deux sous-proposition soit vraie*. 
 
 *** Exemples:
 
-  - 5 > 3 \lor 5 < 3
+  - (5 > 3) \lor (5 < 3)
 
     Vrai, c'est la première proposition qui prend le dessus.
 
-  - 10 > 15 \lor 8 < 5
+  - (10 > 15) \lor (8 < 5)
 
     Faux.
 
-  - (John est heureux \lor John est malheureux) \lor 2/3 \in N
+  - ((John est heureux) \lor (John est malheureux)) \lor (2/3 = 3/2)
 
     Vraie, la puissance de la gaieté de John est absolue !
 
@@ -130,11 +130,11 @@ L'implication peut-être lu comme un *si ... alors*. On la note \Rightarrow .Dan
 *A \Rightarrow B*, si A est vraie, alors le résultat sera *B*, sinon Vraie.
 
 *** Exemples
-- 3 < 2 \Rightarrow 5 < 3
+- (3 < 2) \Rightarrow (5 < 3)
 
 Vrai, car la proposition initiale (le A dans le pattern juste au dessus), est faux, donc le résultat sera vraie.
 
-- 2 = 1 + 1 \Rightarrow John est triste
+- (2 = 1 + 1) \Rightarrow (John est triste)
 
 Bien sur, comme John est heureux, le résultat est Faux
 
@@ -155,7 +155,7 @@ Comme son nom l'indique, cela correspond à vérifier si les deux propositions s
 
 *** Exemples
 
-- (3 < 5 \land 9 > 5) \Leftrightarrow (4 = 8/2 \Rightarrow 3 > 4)
+- ((3 < 5) \land (9 > 5)) \Leftrightarrow ((4 = 8/2) \Rightarrow (3 > 4))
 
 Les *deux propositions étant fausses*, la proposition est donc vraie (si vous avez un doute sur pourquoi ces propositions sont fausses, relisez les paragraphes qui leurs sont dédiés)
 
@@ -179,11 +179,11 @@ La négation est assez simple, elle change simplement l'état d'une proposition.
 
 *** Exemples
 
-- \neg (3 > 4 \Leftrightarrow 4 < 3)
+- \neg ((3 > 4) \Leftrightarrow (4 < 3))
 
   Vrai, la proposition est fausse initialement, ainsi son état passe à vraie.
 
-- \neg ((100 = 10 * 10) \Rightarrow (3 \in S \land 3 \notin S))
+- \neg ((100 = 10 * 10) \Rightarrow ((3 \in S) \land (3 \notin S)))
 
   Vrai aussi
 
