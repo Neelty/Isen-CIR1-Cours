@@ -3,11 +3,10 @@
 
 
 * Table Of Contents :toc:
-- [[#disclaimer][Disclaimer]]
 - [[#propositions][Propositions]]
   - [[#quest-quune-proposition-][Qu'est qu'une proposition ?]]
   - [[#exemples][Exemples]]
-  - [[#subtilité][Subtilité]]
+  - [[#subtilités][Subtilités]]
   - [[#les-propositions-composées][Les propositions composées]]
 - [[#propositions-avec-symboles][Propositions avec symboles]]
   - [[#conjonction][Conjonction]]
@@ -15,9 +14,6 @@
   - [[#implication][Implication]]
   - [[#léquivalence][L'équivalence]]
   - [[#négation][Négation]]
-
-* Disclaimer
-*Attention, cela n'a pas pour but de remplacer le cours ! Il est juste présent pour vous aider à le comprendre. Il ne faut surtout pas vous appuyer totalement dessus. Certains points seront passés (car j'ai la flemme).*
 
 * Propositions
 ** Qu'est qu'une proposition ?
@@ -37,7 +33,7 @@ Correcte et facilement vérifiable.
 - 4 > 9
 Malgrès une absurdité, cela n'en reste pas moins une proposition. (mais ca pique les yeux quand même).
 
-** Subtilité
+** Subtilités
 
 - Une proposition qui ne décrit qu'une seule idée (1 = 2 - 1) est dit *atomique*
 
