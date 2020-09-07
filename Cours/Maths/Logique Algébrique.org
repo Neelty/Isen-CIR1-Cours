@@ -178,7 +178,7 @@ La négation est assez simple, elle change simplement l'état d'une proposition.
 
 *** Exemples
 
-- \neg ((3 > 4) \Leftrightarrow (4 < 3))
+- \neg ((3 < 4) \Leftrightarrow (4 < 3))
 
   Vrai, la proposition est fausse initialement, ainsi son état passe à vraie.
 
