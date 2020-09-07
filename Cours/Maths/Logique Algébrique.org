@@ -14,6 +14,9 @@
   - [[#implication][Implication]]
   - [[#léquivalence][L'équivalence]]
   - [[#négation][Négation]]
+  - [[#exercice-complexe-safépeur][Exercice complexe (safépeur)]]
+- [[#les-quantifiers][Les Quantifiers]]
+  - [[#quest-quun-quantifier-][Qu'est qu'un quantifier ?]]
 
 * Propositions
 ** Qu'est qu'une proposition ?
@@ -65,7 +68,7 @@ A l'instar des propositions atomiques (une seule idée), les *compositions compo
 
 ** Conjonction
 
-Une proposition composée avec une conjonction nécessite que les *2 sous propositions soit vraies*.
+Une proposition composée avec une conjonction nécessite que les *2 sous-propositions soit vraies*.
 On le note \land .
 
 *** Exemples:
@@ -102,7 +105,7 @@ Cette fois-ci, il faut que *au moins une des deux sous-proposition soit vraie*. 
 
   - (5 > 3) \lor (5 < 3)
 
-    Vrai, c'est la première proposition qui prend le dessus.
+    Vrai, c'est la première sous-proposition qui prend le dessus.
 
   - (10 > 15) \lor (8 < 5)
 
@@ -147,17 +150,17 @@ Bien sur, comme John est heureux, le résultat est Faux
 
 ** L'équivalence
 
-Comme son nom l'indique, cela correspond à vérifier si les deux propositions sont équivalentes. On la note \Leftrightarrow
+Comme son nom l'indique, cela correspond à vérifier si les deux sous-propositions sont équivalentes. On la note \Leftrightarrow
 
 *** Exemples
 
 - ((3 < 5) \land (9 > 5)) \Leftrightarrow ((4 = 8/2) \Rightarrow (3 > 4))
 
-Les *deux propositions étant fausses*, la proposition est donc vraie (si vous avez un doute sur pourquoi ces propositions sont fausses, relisez les paragraphes qui leurs sont dédiés)
+Les *deux sous-propositions étant fausses*, la proposition est donc vraie (si vous avez un doute sur pourquoi ces sous-propositions sont fausses, relisez les paragraphes qui leurs sont dédiés)
 
 - x est positif \Leftrightarrow x est négatif
 
-Les deux propositions étant contraires (on va le voir juste après), il y a donc *nécessairement une des deux qui est fausse, et l'autre vraie* (inutile de connaître x). Ainsi le résultat sera faux.
+Les deux sous-propositions étant contraires (on va le voir juste après), il y a donc *nécessairement une des deux qui est fausse, et l'autre vraie* (inutile de connaître x). Ainsi le résultat sera faux.
 
 *** Sa table de vérité
 
@@ -190,3 +193,62 @@ La négation est assez simple, elle change simplement l'état d'une proposition.
 |---+--------|
 | 0 |      1 |
 | 1 |      0 |
+
+
+** Exercice complexe (safépeur)
+
+Essaye de les faire sans regarder la réponse, mais bon tu fais ce que tu veux.
+
+*** Exercice
+
+Posons T comme étant une proposition à l'état vraie.
+
+Determinez pour chacun des cas suivant, si on peut connaître à coup sur le résultat de la proposition. (Un exemple pour exprimer mon propos)
+
+- Exemple :
+
+  T \land (\neg T)
+
+  Ici, nous pouvons être à coup sur que le résultat sera faux. C'est cette certitude que nous cherchons. Il suffit de dire si elle existe ou non, si oui, donnez sa valeur.
+
+1) T \lor A
+2) T \Rightarrow A
+3) \neg T \Rightarrow \neg (A \lor B)
+4) \neg (\neg T \land A) \Leftrightarrow \neg T
+5) \neg ((\neg T \land \neg A) \Leftrightarrow \neg B)
+6) A \Rightarrow (\neg B \Rightarrow (\neg T \Rightarrow \neg A))
+
+*** Solutions
+
+1) T étant vrai, pas besoin de savoir l'état de A pour savoir que le résultat est déjà défini, et est vrai.
+2) On ne peut pas savoir, la solution dépend de A.
+3) On peut le determiner, nous somme dans le cas contraire du précedant, la première proposition étant fausse, le résultat est fini, qu'importe la deuxième. Le résultat est donc vrai.
+
+   (Jusque là c'était juste de la lecture des tables de vérités)
+
+4) Procédons au cas par cas
+
+   - (\neg T \land A) : Faux car \neg T est faux
+   - \neg (\neg T \land A) : Vrai, par déduction de l'affirmation précedente
+   - \neg (\neg T \land A) : \Leftrightarrow \neg T Faux, car \neg T et Vrai ne sont pas identiques.
+
+
+5) Procédons au cas par cas
+
+   - (\neg T \land \neg A) : Faux, car \neg T est Faux
+   - (\neg T \land \neg A) \Leftrightarrow \neg B) : On ne peut pas savoir, nous ne connaissons rien de B
+   - \neg ((\neg T \land \neg A) \Leftrightarrow \neg B) : Ainsi on ne peut pas le déterminer.
+
+6) Procédons au cas par cas
+
+   - \neg T \Rightarrow \neg A Necessairement vrai, \neg T est faux
+   - \neg B \Rightarrow (\neg T \Rightarrow \neg A) Vrai, si B est vrai, alors le résultat l'est aussi, et on ne nous soucis nullement de la deuxième proposition. Si B faux, alors on s'intéresse, cette fois si, à la deuxième proposition, qui est vrai, donc le résultat l'est aussi.
+   - A \Rightarrow (\neg B \Rightarrow (\neg T \Rightarrow \neg A)) Meme raisonnement qu'auparavant. Ainsi le résultat est vrai.
+
+
+
+* Les Quantifiers
+
+** Qu'est qu'un quantifier ?
+
+TODO
