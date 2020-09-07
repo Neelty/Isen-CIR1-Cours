@@ -12,6 +12,9 @@
 - [[#propositions-avec-symboles][Propositions avec symboles]]
   - [[#conjonction][Conjonction]]
   - [[#disjonction][Disjonction]]
+  - [[#implication][Implication]]
+  - [[#léquivalence][L'équivalence]]
+  - [[#négation][Négation]]
 
 * Disclaimer
 *Attention, cela n'a pas pour but de remplacer le cours ! Il est juste présent pour vous aider à le comprendre. Il ne faut surtout pas vous appuyer totalement dessus. Certains points seront passés (car j'ai la flemme).*
@@ -25,15 +28,14 @@ Une proposition est *un objet théorique*, ayant la particularité suivante : *i
 
 - John a 27 ans.
 
-Correcte et simple
+Correcte et simple.
 
 - Il fait beau aujourd'hui.
 
-Correcte et facilement vérifiable
+Correcte et facilement vérifiable.
 
 - 4 > 9
-
-Malgrès une absurdité, cela n'en reste pas moins qu'une proposition. (mais ca pique les yeux quand même)
+Malgrès une absurdité, cela n'en reste pas moins une proposition. (mais ca pique les yeux quand même).
 
 ** Subtilité
 
@@ -47,7 +49,7 @@ Malgrès une absurdité, cela n'en reste pas moins qu'une proposition. (mais ca 
 
   + x - 3 = 5
 
-    Pas correct, car nous n'avons *pas d'informations sur x*. Il faut lui attribuer une valeur pour que cela soit une proposition
+    Pas correct, car nous n'avons *pas d'informations sur x*. Il faut lui attribuer une valeur pour que cela devienne une proposition.
 
   + Cette proposition est fausse.
 
@@ -61,16 +63,16 @@ A l'instar des propositions atomiques (une seule idée), les *compositions compo
 
   *John a 27 ans et il aime la bières*
 
-  Ici 2 idées mise en évidence, et misent en relation avec *et*
+  Ici 2 idées misent en évidence, et misent en relation avec *et*
 
 * Propositions avec symboles
 
 ** Conjonction
 
 Une proposition composée avec une conjonction nécessite que les *2 sous propositions soit vraies*.
-On le note \land
+On le note \land .
 
-Exemples:
+*** Exemples:
 
   - 5 > 3 \land 9 < 10
 
@@ -84,20 +86,92 @@ Exemples:
 
     John étant quelqu'un d'heureux, cette proposition est vraie.
 
+*** Sa table de vérité
+
+| A | B | A land B |
+|---+---+----------|
+| 0 | 0 |    0     |
+| 0 | 1 |    0     |
+| 1 | 0 |    0     |
+| 1 | 1 |    1     |
+
+Les *1* représentent une proposition vraie, les *0* des fausses.
+
+
 ** Disjonction
 
-Cette fois-ci, il faut que *au moins une des deux sous-proposition soit vraie*.
+Cette fois-ci, il faut que *au moins une des deux sous-proposition soit vraie*. On la note \lor .
 
-Exemples:
+*** Exemples:
 
   - 5 > 3 \lor 5 < 3
 
-    Vrai (vous avez compris le principe maintenant)
+    Vrai, c'est la première proposition qui prend le dessus.
 
   - 10 > 15 \lor 8 < 5
 
-    Faux
+    Faux.
 
   - (John est heureux \lor John est malheureux) \lor 2/3 \in N
 
     Vraie, la puissance de la gaieté de John est absolue !
+
+*** Sa table de vérité
+
+| A | B | A \lor B |
+|---+---+----------|
+| 0 | 0 |        0 |
+| 0 | 1 |        1 |
+| 1 | 0 |        1 |
+| 1 | 1 |        1 |
+
+** Implication
+L'implication peut-être lu comme un *si ... alors*. On la note \Rightarrow .Dans l'expression
+*A \Rightarrow B*, si A est vraie, alors le résultat sera *B*, sinon Vraie.
+
+*** Exemples
+- 3 < 2 \Rightarrow 5 < 3
+
+Vrai, car la proposition initiale (le A dans le pattern juste au dessus), est faux, donc le résultat sera vraie.
+
+- 2 = 1 + 1 \Rightarrow John est triste
+
+Bien sur, comme John est heureux, le résultat est Faux
+
+*** Sa table de vérité
+
+| A | B | A \Rightarrow B |
+|---+---+-----------------|
+| 0 | 0 |        1        |
+| 0 | 1 |        1        |
+| 1 | 0 |        0        |
+| 1 | 1 |        1        |
+
+
+
+** L'équivalence
+
+Comme son nom l'indique, cela correspond à vérifier si les deux propositions sont équivalentes. On la note \Leftrightarrow
+
+*** Exemples
+
+- (3 < 5 \land 9 > 5) \Leftrightarrow (4 = 8/2 \Rightarrow 3 > 4)
+
+Les *deux propositions étant fausses*, la proposition est donc vraie (si vous avez un doute sur pourquoi ces propositions sont fausses, relisez les paragraphes qui leurs sont dédiés)
+
+- x est positif \Leftrightarrow x est négatif
+
+Les deux propositions étant contraires (on va le voir juste après), il y a donc *nécessairement une des deux qui est fausse, et l'autre vraie* (inutile de connaître x). Ainsi le résultat sera faux.
+
+*** Sa table de vérité
+
+| A | B | A \Leftrightarrow B |
+|---+---+---------------------|
+| 0 | 0 |        1            |
+| 0 | 1 |        0            |
+| 1 | 0 |        0            |
+| 1 | 1 |        1            |
+
+** Négation
+
+La négation est assez simple, elle change simplement l'état d'une proposition. On la note \textlnot{}
