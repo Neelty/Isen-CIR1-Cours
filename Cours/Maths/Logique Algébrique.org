@@ -230,7 +230,7 @@ Determinez pour chacun des cas suivant, si on peut connaître à coup sur le ré
 
    - (\neg T \land A) : Faux car \neg T est faux
    - \neg (\neg T \land A) : Vrai, par déduction de l'affirmation précedente
-   - \neg (\neg T \land A) : \Leftrightarrow \neg T Faux, car \neg T et Vrai ne sont pas identiques.
+   - \neg (\neg T \land A) \Leftrightarrow \neg T : Faux, car \neg T et Vrai ne sont pas identiques.
 
 5) Procédons au cas par cas
 
