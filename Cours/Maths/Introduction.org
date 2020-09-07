@@ -88,12 +88,12 @@ On le note \land .
 
 *** Sa table de vérité
 
-| A | B | A land B |
-|---+---+----------|
-| 0 | 0 |    0     |
-| 0 | 1 |    0     |
-| 1 | 0 |    0     |
-| 1 | 1 |    1     |
+| A | B | A \land B |
+|---+---+-----------|
+| 0 | 0 |         0 |
+| 0 | 1 |         0 |
+| 1 | 0 |         0 |
+| 1 | 1 |         1 |
 
 Les *1* représentent une proposition vraie, les *0* des fausses.
 
@@ -167,11 +167,30 @@ Les deux propositions étant contraires (on va le voir juste après), il y a don
 
 | A | B | A \Leftrightarrow B |
 |---+---+---------------------|
-| 0 | 0 |        1            |
-| 0 | 1 |        0            |
-| 1 | 0 |        0            |
-| 1 | 1 |        1            |
+| 0 | 0 |                   1 |
+| 0 | 1 |                   0 |
+| 1 | 0 |                   0 |
+| 1 | 1 |                   1 |
 
 ** Négation
 
-La négation est assez simple, elle change simplement l'état d'une proposition. On la note \textlnot{}
+La négation est assez simple, elle change simplement l'état d'une proposition. On la note \neg
+
+
+*** Exemples
+
+- \neg (3 > 4 \Leftrightarrow 4 < 3)
+
+  Vrai, la proposition est fausse initialement, ainsi son état passe à vraie.
+
+- \neg ((100 = 10 * 10) \Rightarrow (3 \in S \land 3 \notin S))
+
+  Vrai aussi
+
+
+*** Sa table de vérité
+
+| A | \neg A |
+|---+--------|
+| 0 |      1 |
+| 1 |      0 |
