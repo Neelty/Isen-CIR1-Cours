@@ -302,9 +302,18 @@ Prenons le pattern suivant :
 *Solution* Si cette proposition est fausse, il suffit juste de trouver un contre-exemple. Le contre-exemple aura donc les propriétés "inverses" de notre proposition initiale.
 
 Ainsi, on aura :
+
     - \exists a \in S, \forall b \in S (\neg P(a,b))
 
 Si cela vous semble confus, traduisez-le littéralement :
 
     - Pour tous a dans S, il existe au moins un b dans S qui vérifie la proposition suivante : P(a,b); en
     - Il existe un a dans D qui pour tout b dans S vérifie \neg P(a,b)
+
+*** Les quantifiers ne créent pas de proposition
+
+Les quantifiers tel quel ne sont pas des propositions, ainsi quelque chose comme cela :
+
+    - \forall n \in N \land \exists m \in N ; \neg \forall x \in R
+
+est gramaticalement incorrect.
