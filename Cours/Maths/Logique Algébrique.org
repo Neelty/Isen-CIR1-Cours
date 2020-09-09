@@ -17,6 +17,7 @@
   - [[#exercice-complexe-safépeur][Exercice complexe (safépeur)]]
 - [[#les-quantifiers][Les Quantifiers]]
   - [[#quest-quun-quantifier-][Qu'est qu'un quantifier ?]]
+  - [[#les-règles-des-quantifiers][Les règles des quantifiers]]
 
 * Propositions
 ** Qu'est qu'une proposition ?
@@ -250,4 +251,38 @@ Determinez pour chacun des cas suivant, si on peut connaître à coup sur le ré
 
 ** Qu'est qu'un quantifier ?
 
-TODO
+    Prenez la fonction f(x) = x. Cette fonction a 3 particularités majeures :
+        - strictement croissante
+        - affine
+        - définie sur R
+
+    On peut donc déduire certaines propriétés de cette fonction :
+        - Pour tous x de R, il existe un et un seul y de R tel que *f(y) = x*
+        - Pour tous x de R, il existe au moins un y de R tel que *f(x) < f(y)*
+
+    Soyez sur de comprendre ces propriétés. De comprendre la réfléxion derrière.
+
+    L'outil mathématiques nous donne des outils pour écrire ces propriétés:
+        - \forall qui peut se lire comme *pour tout*
+        - \exists qui peut se lire comme *il existe au moins*
+        - \exists! qui peut se lire comme *il existe un et un seul*
+
+    Ainsi on peut les réecrire comme cela :
+        - \forall x \in R \exists! y \in R (f(y) = x)
+        - \forall x \in R \exist y \in R (f(x) < f(y))
+
+** Les règles des quantifiers
+*** L'orde des quantifiers est important
+
+Ces deux propositions
+
+- \forall n \in N \exists m \in N (n < m)
+- \exists m \in N \forall n \in N (n < m)
+
+N'ont pas du tout la même signification, le premier peut se lire comme
+
+Pour tous n de N, il existe un m de N strimement supérieur à n. Donc que N est infini, ce qui est parfaitement vrai.
+
+Alors que le second
+
+Il existe un n de N strictement supérieur à tous les autres m de N. Donc que N est fini, ce qui est faux
