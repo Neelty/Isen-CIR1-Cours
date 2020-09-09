@@ -50,7 +50,7 @@ Pourquoi apprendre les maths, si on aime pas ? Et bien, ne les apprenez pas ! Ap
 
 ** Lambda-calculus and Combinators an introduction
 
-[[https://covers.zlibcdn2.com/covers/books/ff/1d/03/ff1d033eac913a9a66dafce2cae839ad.jpg]]
+[[https://covers.zlibcdn2.com/covers/books/e0/ae/ad/e0aeadd3c00088ed9f8d0fc5c5895e65.jpg]]
 
 
 Et un dernier pour la route :
