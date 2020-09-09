@@ -252,9 +252,9 @@ Determinez pour chacun des cas suivant, si on peut connaître à coup sur le ré
 ** Qu'est qu'un quantifier ?
 
     Prenez la fonction f(x) = x. Cette fonction a 3 particularités majeures :
-        - strictement croissante
-        - affine
-        - définie sur R
+        - *strictement croissante*
+        - *affine*
+        - *définie sur R*
 
     On peut donc déduire certaines propriétés de cette fonction :
         - Pour tous x de R, il existe un et un seul y de R tel que *f(y) = x*
@@ -279,10 +279,32 @@ Ces deux propositions
 - \forall n \in N \exists m \in N (n < m)
 - \exists m \in N \forall n \in N (n < m)
 
-N'ont pas du tout la même signification, le premier peut se lire comme
+*N'ont pas du tout la même signification*, le premier peut se lire comme
 
-Pour tous n de N, il existe un m de N strimement supérieur à n. Donc que N est infini, ce qui est parfaitement vrai.
+Pour tous n de N, il existe un m de N strimement supérieur à n. Donc que N est infini, ce qui est parfaitement *vrai*.
 
 Alors que le second
 
-Il existe un n de N strictement supérieur à tous les autres m de N. Donc que N est fini, ce qui est faux
+Il existe un n de N strictement supérieur à tous les autres m de N. Donc que N est fini, ce qui est *faux*.
+
+*** La négation des quantifiers
+
+Comme cela reste une proposition, nous pouvons *toujours utiliser* la conjonction, disjonction, implication, équivalence et négation. Cette dernière a une propriété avec les quantifiers.
+
+Prenons le pattern suivant :
+
+    - \forall a \in S, \exists b \in S (P(a,b))
+
+      Avec a,b des variables, S un ensemble quelconque et P une proposition dépendante de deux valeurs.
+
+*Exercice* Quel est sa négation ? (\neg (\forall a \in S, \exists b \in S (P(a,b)))
+
+*Solution* Si cette proposition est fausse, il suffit juste de trouver un contre-exemple. Le contre-exemple aura donc les propriétés "inverses" de notre proposition initiale.
+
+Ainsi, on aura :
+    - \exists a \in S, \forall b \in S (\neg P(a,b))
+
+Si cela vous semble confus, traduisez-le littéralement :
+
+    - Pour tous a dans S, il existe au moins un b dans S qui vérifie la proposition suivante : P(a,b); en
+    - Il existe un a dans D qui pour tout b dans S vérifie \neg P(a,b)
