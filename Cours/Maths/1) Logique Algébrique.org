@@ -18,6 +18,7 @@
 - [[#les-quantifiers][Les Quantifiers]]
   - [[#quest-quun-quantifier-][Qu'est qu'un quantifier ?]]
   - [[#les-règles-des-quantifiers][Les règles des quantifiers]]
+  - [[#exercices][Exercices]]
 
 * Propositions
 ** Qu'est qu'une proposition ?
@@ -317,3 +318,50 @@ Les quantifiers tel quel ne sont pas des propositions, ainsi quelque chose comme
     - \forall n \in N \land \exists m \in N ; \neg \forall x \in R
 
 est gramaticalement incorrect.
+
+
+** Exercices
+
+    1) Exprimer la proposition P qui désigne si un nombre est premier ou non.
+
+    2) Dire si ces prochaines propositions sont vraies ou fausses :
+
+      a) \forall x in R, \exists y \in \R ( sqrt{x} = y ) ;; sqrt = racine carré
+
+      b) \exists n \in N+, \forall m \in N- (n > m)
+
+      c) \forall n \in N+, \forall m \in N- (n > m)
+
+    3) Faites la négation de cette proposition :
+
+      - \exists x \in R, \exists y \in R ( y > x > y² \Rightarrow ( 0 < x < 1 \land 0 < y < 1 ) )
+
+
+*** Solutions
+
+1) P(n) :\equiv n > 1 \land \forall m \in N ((1 < m \land m² \le n) \Rightarrow \neg (m | n)) ou n dénote d'un entier naturel
+
+   ;; m | n -> "m divise n"
+
+   - Simplement, un nombre premier est un entier naturel qui a deux diviseurs : 1 et lui-même.
+
+   - Ainsi on pose n notre entier naturel, avec une condition initiale, il doit être nécessairement plus grand que 1 (1 n'est pas un nombre premier)
+
+   - Ensuite on regarde pour tout entier naturel m, si il est compris entre 2 (2 compris) et m² \le n. Pourquoi cette intervalle ? Et bien essayez d'y répondre par vous-même. Un indice, listez tous les diviseurs d'un entier naturel non premier (comme 48 par exemple)
+
+   - Si c'est le cas on regarde s'il est diviseur de n. Si m divise n, alors n n'est pas premier, sinon tout va bien, n est premier.
+     ;; note : les valeurs non comprises dans l'intervalle [2,m² \le 2] ne sont pas des diviseurs de n, donc même si elles sont prises en compte, elles vont être "dépendante" des valeurs de cet intervalle.
+
+2) Exercice 2
+
+   a) Faux, pour les nombres négatifs
+
+   b) Vrai, pour n = 1 par exemple
+
+   c) Vrai aussi
+
+3) \forall x \in R, \forall y \in R ( x > y > x² \land ( 0 \ge x \ge 1 \lor 0 \ge y \ge 1 ))
+
+   (P \Rightarrow Q) \Leftrightarrow (\neg P \lor Q) ainsi
+
+   \neg (P \Rightarrow Q) \Leftrightarrow \neg (\neg P \lor Q) \Leftrightarrow (P \land \neg Q)
