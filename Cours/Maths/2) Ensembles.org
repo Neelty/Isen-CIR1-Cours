@@ -1,1 +1,71 @@
 #+TITLE: Ensembles
+
+
+
+* Table of Contents :toc:
+- [[#quest-quun-ensemble-][Qu'est qu'un ensemble ?]]
+  - [[#construction-dun-ensemble][Construction d'un ensemble]]
+  - [[#les-applications-sur-les-ensembles][Les applications sur les ensembles]]
+
+* Qu'est qu'un ensemble ?
+
+Un ensemble est une *collection d'informations, d'objets mathématiques ou non*.
+
+Un ensemble est noté avec une *lettre majuscule alors qu'un élément d'un ensemble par une lette minuscule*. Un ensemble peut-être un ensemble d'ensemble.
+
+*La répetition d'un élément d'un ensemble n'existe pas*.
+Un élément a d'un ensemble A y est présent ou non, il n'est pas "présent plusieurs fois".
+
+La représentation d'un ensemble se fait entre *{}*.
+
+*L'ordre des éléments dans un ensemble est sans importance*.
+
+Ainsi *{1 , Lundi, 3 = 6 } = {Lundi, 1 , 1 , 3 = 6 }*
+
+Le nombre d'élément d'un ensemble est appelé son cardinal. Noté *Card(E)*.
+
+L'ensemble vide, ne contenant aucun élément, est unique, présent dans chaque ensemble, et noté \O.
+
+\O ; {a} ; {b} ; {c} ; {a,b} ; {b,c} ; {a,c} ; {a,b,c} sont des sous-ensemble de { a , b , c }. A est un sous-ensemble de B, sera noté A \subset B. Ainsi :
+
+    - (A \subset B) \Leftrightarrow (\forall a in A (a \in B))
+
+
+*** Propriétés :
+
+- A \subset B, B \subset C -> \A \subset C
+
+  Par exemple { 1 } \subset { 1 , 2 } ; { 1 , 2 } \subset { 1 , 2 , 3 } -> { 1 } \subset { 1 , 2 , 3 }
+
+- A \subset B -> Card(A) \le Card(B)
+
+
+
+
+** Construction d'un ensemble
+
+On peut écrire un ensemble de 2 manières :
+
+    - En expansion, c'est à dire écrire les éléments un par un.
+
+    - En compréhension, c'est à dire à l'aide de règles, de proposition
+
+      Par exemple :
+      + { x² | x \in R } représente l'ensemble de tout les carrés réel.
+
+      + { n \in N | (3 | n) } représente l'ensemble des entiers naturels multiple de 3. A noter que cette fois-ci nous n'appliquons pas de fonction à x, ainsi l'écriture de l'ensemble est légèrement différente.
+
+
+** Les applications sur les ensembles
+
+*** l'union
+
+A \cup B sera un ensemble constitué de tous les éléments compris dans A ou B
+
+On peut l'exprimer comme : A \cup B = { x | x \in A \lor x \in B }
+
+*** L'intersection
+
+A \cap B sera un ensemble constitué de tous les élément compris dans A et B
+
+On peut l'exprimer comme : A \cap B = { x | x \in A \land x \in B }
