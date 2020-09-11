@@ -32,7 +32,7 @@ L'ensemble vide, ne contenant aucun élément, est unique, présent dans chaque 
 
 \emptyset ; {a} ; {b} ; {c} ; {a,b} ; {b,c} ; {a,c} ; {a,b,c} sont des sous-ensemble de { a , b , c }. A est un sous-ensemble de B, sera noté A \subset B. Ainsi :
 
-    - (A \subset B) \Leftrightarrow (\forall a in A (a \in B))
+    - (A \subset B) \Leftrightarrow (\forall a \in A (a \in B))
 
 
 *** Propriétés :
@@ -73,7 +73,7 @@ Exemple : { 1 , 2 , 3 } \cup { 3 , 4 , 5 } = { 1 , 2 , 3 , 4 , 5 }
 
 **** Quelques propriétés de l'union
 
-- L'union est *commutative* : A \cup B = \B \cup A
+- L'union est *commutative* : A \cup B = B \cup A
 
 - L'union est associative : (A \cup B) \cup C = A \cup (B \cup C) = A \cup B \cup C
 
@@ -95,7 +95,7 @@ Exemple : { 1 , 2 , 3 } \cup { 3 , 4 , 5 } = {3}
 
 - A \cap A = A
 
--  A \subset B \Leftrightarrow A \cap B = A
+- A \subset B \Leftrightarrow A \cap B = A
 
 
 
