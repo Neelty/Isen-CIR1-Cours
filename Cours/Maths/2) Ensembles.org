@@ -87,7 +87,7 @@ A \cap B sera un ensemble constitué de tous les élément compris dans A et dan
 
 On peut l'exprimer comme : A \cap B = { x | x \in A \land x \in B }
 
-Exemple : { 1 , 2 , 3 } \cup { 3 , 4 , 5 } = {3}
+Exemple : { 1 , 2 , 3 } \cap { 3 , 4 , 5 } = {3}
 
 **** Quelques propriétés de l'intersection
 
