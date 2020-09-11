@@ -5,7 +5,11 @@
 * Table of Contents :toc:
 - [[#quest-quun-ensemble-][Qu'est qu'un ensemble ?]]
   - [[#construction-dun-ensemble][Construction d'un ensemble]]
-  - [[#les-applications-sur-les-ensembles][Les applications sur les ensembles]]
+  - [[#les-opérations-sur-les-ensembles][Les opérations sur les ensembles]]
+- [[#attention][Attention]]
+- [[#les-applications][Les Applications]]
+  - [[#fonctions][Fonctions]]
+  - [[#applications][Applications]]
 
 * Qu'est qu'un ensemble ?
 
@@ -24,9 +28,9 @@ Ainsi *{1 , Lundi, 3 = 6 } = {Lundi, 1 , 1 , 3 = 6 }*
 
 Le nombre d'élément d'un ensemble est appelé son cardinal. Noté *Card(E)*.
 
-L'ensemble vide, ne contenant aucun élément, est unique, présent dans chaque ensemble, et noté \O.
+L'ensemble vide, ne contenant aucun élément, est unique, présent dans chaque ensemble, et noté \emptyset.
 
-\O ; {a} ; {b} ; {c} ; {a,b} ; {b,c} ; {a,c} ; {a,b,c} sont des sous-ensemble de { a , b , c }. A est un sous-ensemble de B, sera noté A \subset B. Ainsi :
+\emptyset ; {a} ; {b} ; {c} ; {a,b} ; {b,c} ; {a,c} ; {a,b,c} sont des sous-ensemble de { a , b , c }. A est un sous-ensemble de B, sera noté A \subset B. Ainsi :
 
     - (A \subset B) \Leftrightarrow (\forall a in A (a \in B))
 
@@ -51,21 +55,111 @@ On peut écrire un ensemble de 2 manières :
     - En compréhension, c'est à dire à l'aide de règles, de proposition
 
       Par exemple :
+
       + { x² | x \in R } représente l'ensemble de tout les carrés réel.
 
       + { n \in N | (3 | n) } représente l'ensemble des entiers naturels multiple de 3. A noter que cette fois-ci nous n'appliquons pas de fonction à x, ainsi l'écriture de l'ensemble est légèrement différente.
 
 
-** Les applications sur les ensembles
+** Les opérations sur les ensembles
 
-*** l'union
+*** L'union
 
-A \cup B sera un ensemble constitué de tous les éléments compris dans A ou B
+A \cup B sera un ensemble constitué de *tous les éléments compris dans A ou dans B*.
 
 On peut l'exprimer comme : A \cup B = { x | x \in A \lor x \in B }
 
+Exemple : { 1 , 2 , 3 } \cup { 3 , 4 , 5 } = { 1 , 2 , 3 , 4 , 5 }
+
+**** Quelques propriétés de l'union
+
+- L'union est *commutative* : A \cup B = \B \cup A
+
+- L'union est associative : (A \cup B) \cup C = A \cup (B \cup C) = A \cup B \cup C
+
+- A \cup A = A
+
+- A \subset B \Leftrightarrow A \cup B = B
+
 *** L'intersection
 
-A \cap B sera un ensemble constitué de tous les élément compris dans A et B
+A \cap B sera un ensemble constitué de tous les élément compris dans A et dans B
 
 On peut l'exprimer comme : A \cap B = { x | x \in A \land x \in B }
+
+Exemple : { 1 , 2 , 3 } \cup { 3 , 4 , 5 } = {3}
+
+**** Quelques propriétés de l'intersection
+
+- L'intersection est, elle aussi, *commutative et associative*.
+
+- A \cap A = A
+
+-  A \subset B \Leftrightarrow A \cap B = A
+
+
+
+*** Le complementaire
+
+*Le complémentaire de A (sous-ensemble de \Omega), noté A^{c}, représente l'ensemble des éléments de \Omega, qui ne sont pas compris dans A*.
+
+Avec A \subset \Omega, on a donc :
+
+A^{c} = { \epsilon \in \Omega | \epsilon \notin A }
+
+**** Quelques propriétés du complementaire d'un ensemble
+
+(avec A,B \subset \Omega)
+
+- (A^{c})^c = A
+
+- A \cap A^{c} = \emptyset
+
+- (A \cap B)^{c} = A^{c} \cup B^{c} ; (A \cup B)^{c} = A^{c} \cap B^{c}
+
+* Attention
+
+Les prochains chapitres seront nettement plus complexes (enfin je trouve perso). Je me dois donc d'être plus rigoureux, et précis. (le niveau va augmenter d'un cran quoi)
+
+
+* Les Applications
+
+** Fonctions
+
+Une fonction /f/ d'un ensemble A (ensemble de départ) *vers* B (ensemble d'arrivé)est un *procédé qui permet de lier des éléments de A (antécédants) avec des éléments de B(images)*.
+
+Le graphe de /f/ est l'ensemble des couples (x, /f/ (x)) de AxB
+
+Exemple :
+
+- ( x \rightarrow x²) est une fonction de R vers R.
+
+** Applications
+
+L'application /f/ de A vers B ( /f/ : A \rightarrow B ) est une *fonction* qui associe chaque élément de A a exactement un élément de B.
+
+Exemple :
+
+/f/ = ( x \rightarrox 1/x ) est une application de *R vers R* (même de R* vers R*)
+
+*** Quelques définitions
+
+- *L'égalité de deux applications* :
+
+  Avec /f/ : A \rightarrow B, /g/ : A' \rightarrow B', on a :
+
+  (/f/ = /g/) \Leftrightarrow ((A = C) \land (A' = B') \land (\forall \epsilon \in A (/f/ (\epsilon) = /g/ (\epsilon))
+
+- *L'identité* de A (ou application identique de A, noté id), est définie comme une application de A \rightarrow A, tel que : \forall \epsilon \in A (id(\epsilon) = \epsilon)
+
+- La *restriction d'une application* :
+
+    Avec :
+  + /f/ : E \rightarrow F
+  + E' \subset E
+
+  La restriction de /f/ à E' est l'application notée /f/ _{|E'} définie par :
+
+  + \forall \epsilon \in E' (/f/ _{|E'}(x) = /f/ (x))
+
+  Qu'est-ce-que cela signifie (c'est tricky je l'admet mais le concept est plutôt trivial). Une restriction d'une application /f/ est simplement /f/ mais définie sur une partie de l'ensemble de départ de /f/.
