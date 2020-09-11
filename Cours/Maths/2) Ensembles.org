@@ -37,11 +37,11 @@ L'ensemble vide, ne contenant aucun élément, est unique, présent dans chaque 
 
 *** Propriétés :
 
-- A \subset B, B \subset C -> \A \subset C
+- A \subset B, B \subset C \rightarrow A \subset C
 
-  Par exemple { 1 } \subset { 1 , 2 } ; { 1 , 2 } \subset { 1 , 2 , 3 } -> { 1 } \subset { 1 , 2 , 3 }
+  Par exemple { 1 } \subset { 1 , 2 } ; { 1 , 2 } \subset { 1 , 2 , 3 } \rightarrow { 1 } \subset { 1 , 2 , 3 }
 
-- A \subset B -> Card(A) \le Card(B)
+- A \subset B \rightarrow Card(A) \le Card(B)
 
 
 
@@ -111,7 +111,7 @@ A^{c} = { \epsilon \in \Omega | \epsilon \notin A }
 
 (avec A,B \subset \Omega)
 
-- (A^{c})^c = A
+- (A^{c})^{c} = A
 
 - A \cap A^{c} = \emptyset
 
@@ -140,7 +140,7 @@ L'application /f/ de A vers B ( /f/ : A \rightarrow B ) est une *fonction* qui a
 
 Exemple :
 
-/f/ = ( x \rightarrox 1/x ) est une application de *R vers R* (même de R* vers R*)
+/f/ = ( x \rightarrow 1/x ) est une application de *R** *vers* *R* (même de R* vers R*)
 
 *** Quelques définitions
 
